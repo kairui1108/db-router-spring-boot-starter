@@ -1,7 +1,7 @@
-package com.ruikiai.middleware.db.router;
+package com.ruikai.middleware.db.router;
 
-import com.ruikiai.middleware.db.router.annotation.DbRouter;
-import com.ruikiai.middleware.db.router.strategy.IDbRouterStrategy;
+import com.ruikai.middleware.db.router.annotation.DbRouter;
+import com.ruikai.middleware.db.router.strategy.IDbRouterStrategy;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.beanutils.BeanUtils;
 import org.apache.commons.lang.StringUtils;
@@ -40,7 +40,7 @@ public class DbRouterJoinPoint {
         this.dbRouterStrategy = dbRouterStrategy;
     }
 
-    @Pointcut("@annotation(com.ruikiai.middleware.db.router.annotation.DbRouter)")
+    @Pointcut("@annotation(com.ruikai.middleware.db.router.annotation.DbRouter)")
     public void aopPoint() {}
 
     @Around("aopPoint() && @annotation(dbRouter)")

@@ -1,4 +1,4 @@
-package com.ruikiai.middleware.db.router;
+package com.ruikai.middleware.db.router;
 
 
 /**

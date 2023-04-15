@@ -1,4 +1,4 @@
-package com.ruikiai.middleware.db.router.annotation;
+package com.ruikai.middleware.db.router.annotation;
 
 import java.lang.annotation.*;
 

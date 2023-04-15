@@ -1,6 +1,6 @@
 package com.ruikai.middleware.test;
 
-import com.ruikiai.middleware.db.router.annotation.DbRouter;
+import com.ruikai.middleware.db.router.annotation.DbRouter;
 import org.junit.Test;
 
 import java.lang.reflect.Method;
@@ -38,6 +38,12 @@ public class ApiTest {
         DbRouter dbRouter = method.getAnnotation(DbRouter.class);
 
         System.out.println(dbRouter.key());
+
+    }
+
+    @Test
+    public void test_route() {
+        String key = "Ukdli109op811d";
 
     }
 

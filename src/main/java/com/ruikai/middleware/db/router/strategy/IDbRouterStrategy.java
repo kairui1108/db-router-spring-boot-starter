@@ -1,4 +1,4 @@
-package com.ruikiai.middleware.db.router.strategy;
+package com.ruikai.middleware.db.router.strategy;
 
 /**
  * @author ruikai

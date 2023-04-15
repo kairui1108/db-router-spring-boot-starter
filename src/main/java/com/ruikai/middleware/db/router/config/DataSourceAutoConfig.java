@@ -1,12 +1,12 @@
-package com.ruikiai.middleware.db.router.config;
+package com.ruikai.middleware.db.router.config;
 
-import com.ruikiai.middleware.db.router.DbRouterConfig;
-import com.ruikiai.middleware.db.router.DbRouterJoinPoint;
-import com.ruikiai.middleware.db.router.dynamic.DynamicDataSource;
-import com.ruikiai.middleware.db.router.dynamic.DynamicMybatisPlugin;
-import com.ruikiai.middleware.db.router.strategy.IDbRouterStrategy;
-import com.ruikiai.middleware.db.router.strategy.impl.DbRouterStrategyHashCode;
-import com.ruikiai.middleware.db.router.util.PropertyUtil;
+import com.ruikai.middleware.db.router.DbRouterJoinPoint;
+import com.ruikai.middleware.db.router.DbRouterConfig;
+import com.ruikai.middleware.db.router.dynamic.DynamicDataSource;
+import com.ruikai.middleware.db.router.dynamic.DynamicMybatisPlugin;
+import com.ruikai.middleware.db.router.strategy.IDbRouterStrategy;
+import com.ruikai.middleware.db.router.strategy.impl.DbRouterStrategyHashCode;
+import com.ruikai.middleware.db.router.util.PropertyUtil;
 import org.apache.ibatis.plugin.Interceptor;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.EnvironmentAware;
@@ -81,11 +81,13 @@ public class DataSourceAutoConfig  implements EnvironmentAware {
         Map<Object, Object> targetDataSources = new HashMap<>();
         for (String dbInfo : dataSourceMap.keySet()) {
             Map<String, Object> objMap = dataSourceMap.get(dbInfo);
-            targetDataSources.put(dbInfo, new DriverManagerDataSource(objMap.get("url").toString(), objMap.get("username").toString(), objMap.get("password").toString()));
+            targetDataSources.put(dbInfo,
+                    new DriverManagerDataSource(objMap.get("url").toString(), objMap.get("username").toString(), objMap.get("password").toString()));
         }
         DynamicDataSource dynamicDataSource = new DynamicDataSource();
         dynamicDataSource.setTargetDataSources(targetDataSources);
-        dynamicDataSource.setDefaultTargetDataSource(new DriverManagerDataSource(defaultDatasourceConfig.get("url").toString()));
+        dynamicDataSource.setDefaultTargetDataSource(new DriverManagerDataSource(
+                defaultDatasourceConfig.get("url").toString(), defaultDatasourceConfig.get("username").toString(), defaultDatasourceConfig.get("password").toString()));
 
         return dynamicDataSource;
     }

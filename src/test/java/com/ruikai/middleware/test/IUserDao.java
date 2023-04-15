@@ -1,6 +1,6 @@
 package com.ruikai.middleware.test;
 
-import com.ruikiai.middleware.db.router.annotation.DbRouter;
+import com.ruikai.middleware.db.router.annotation.DbRouter;
 
 /**
  * @author ruikai

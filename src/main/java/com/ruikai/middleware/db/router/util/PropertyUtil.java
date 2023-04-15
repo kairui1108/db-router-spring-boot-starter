@@ -1,4 +1,4 @@
-package com.ruikiai.middleware.db.router.util;
+package com.ruikai.middleware.db.router.util;
 
 import org.springframework.core.env.Environment;
 import org.springframework.core.env.PropertyResolver;

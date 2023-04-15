@@ -1,6 +1,6 @@
-package com.ruikiai.middleware.db.router.dynamic;
+package com.ruikai.middleware.db.router.dynamic;
 
-import com.ruikiai.middleware.db.router.DbContextHolder;
+import com.ruikai.middleware.db.router.DbContextHolder;
 import org.springframework.jdbc.datasource.lookup.AbstractRoutingDataSource;
 
 /**
