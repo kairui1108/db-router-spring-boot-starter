@@ -1,8 +1,8 @@
-package com.ruikiai.middleware.db.router.strategy.impl;
+package com.ruikai.middleware.db.router.strategy.impl;
 
-import com.ruikiai.middleware.db.router.DbContextHolder;
-import com.ruikiai.middleware.db.router.DbRouterConfig;
-import com.ruikiai.middleware.db.router.strategy.IDbRouterStrategy;
+import com.ruikai.middleware.db.router.DbContextHolder;
+import com.ruikai.middleware.db.router.DbRouterConfig;
+import com.ruikai.middleware.db.router.strategy.IDbRouterStrategy;
 import lombok.extern.slf4j.Slf4j;
 
 /**
@@ -41,7 +41,7 @@ public class DbRouterStrategyHashCode implements IDbRouterStrategy {
 
     @Override
     public void setTbKey(int tbIdx) {
-        DbContextHolder.setDbKey(String.format("%02d", tbIdx));
+        DbContextHolder.setTbKey(String.format("%03d", tbIdx));
     }
 
     @Override
